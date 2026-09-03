@@ -96,4 +96,27 @@ function selecionandoMelhores(populacao, quantidade){
 
 let pais = selecionandoMelhores(avaliados, 10)
 
+//testes
 console.log(pais)
+
+
+//coito :/
+function coito(pai1, pai2){
+let filho = "";
+
+for (let i = 0; i < objetivo.length; i++){
+if (Math.random() < 0.5){
+    filho += pai1[i]
+}else{
+    filho += pai2[i]
+}
+
+}
+
+return filho
+
+}
+
+
+//TESTE
+console.log(coito("HEPPE", "OLLLO"));
