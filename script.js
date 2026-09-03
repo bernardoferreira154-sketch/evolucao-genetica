@@ -1,4 +1,4 @@
-const objetivo = "HELLO";
+const objetivo = "ABACATE";
 
 const letras = "ABCDEFGHIJKLMNOPQRSTUVWXYZÇ"
 
@@ -15,9 +15,6 @@ let pessoa = "";
     return pessoa
 
 }
-//teste
-console.log(AdaoEEva())
-
 
 //calcular acertos
 function calcularFitness (pessoa) {
@@ -34,9 +31,6 @@ let acertos = 0
 
 }
 
-//teste
-console.log(calcularFitness("HELIP"))
-
 
 //criando o conjunto da rapaziada. vulgo: população
 function criarPopulacao(tamanho){
@@ -49,9 +43,6 @@ const populacao = [];
     return populacao;
 
 }
-
-//teste
-console.log(criarPopulacao(100));
 
 
 //avliando os gurizao
@@ -130,13 +121,11 @@ function mutar(individuo, taxa){
 
         return resultado
 }
-//teste
-console.log(mutar("HELLO", 0.25));
 
 //variaveis, valores, etc
 const tamanhoPopulacao = 100;
 const quantidadePais = 10;
-const taxaDeMutacao = 0.5;
+const taxaDeMutacao = 0.05;
 
 let populacao = criarPopulacao(tamanhoPopulacao);
 
@@ -146,7 +135,7 @@ while (true) {
     ordenarPopulacao(avaliados)
 
         if (avaliados[0].fitness == objetivo.length){
-            console.log("ACHEI, SEU BABÃO. a palavra era", avaliados[0].individuo);
+            console.log("ACHEI! a palavra era", avaliados[0].individuo);
             break;
         }
 
@@ -160,6 +149,7 @@ while (true) {
             let pai2 = pais[escolhePai2]
             let filho = coito(pai1.individuo, pai2.individuo)
             filho = mutar(filho, taxaDeMutacao);
+            console.log(filho)
             novaPopulacao.push(filho);
         }
         
