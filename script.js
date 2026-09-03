@@ -87,3 +87,13 @@ let populacao = criarPopulacao(100);
 let avaliados = avaliandoPopulacao(populacao);
 //teste
 console.log(ordenarPopulacao(avaliados))
+
+//selecionando os goat
+function selecionandoMelhores(populacao, quantidade){
+
+    return populacao.slice(0, quantidade);
+}
+
+let pais = selecionandoMelhores(avaliados, 10)
+
+console.log(pais)
